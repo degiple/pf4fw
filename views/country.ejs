@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+  <body>
+    
+  <h1><%= title %></h1>
+  
+  <TABLE>
+      <TR>
+        <TH>国コード</TH>
+        <TH>国名</TH>
+        <TH>国名（英語）</TH>
+      </TR>
+      <% countryList.forEach(function(cItem) { %>
+      <TR>
+        <TD> <%= cItem.counrty_cd %> </TD>
+        <TD> <%= cItem.country_name %> </TD>
+        <TD> <%= cItem.country_name_eng %> </TD>
+      </TR>
+      <% }); %>
+    </TABLE>
+    
+  </body>
+</html>
+

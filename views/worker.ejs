@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+  <body>
+    
+  <h1><%= title %></h1>
+  
+  <TABLE>
+      <TR>
+        <TH>DFA番号(レッドリボン番号)</TH>
+        <TH>登録日時</TH>
+        <TH>更新日時</TH>
+        <TH>名前</TH>
+        <TH>誕生日</TH>
+        <TH>性別</TH>
+        <TH>国コード</TH>
+      </TR>
+      
+      <% workerList.forEach(function(item) { %>
+      
+      <TR>
+        <TD> <%= item.dfa_num %> </TD>
+        <TD> <%= item.system_make_dt %> </TD>
+        <TD> <%= item.system_update_dt %> </TD>
+        <TD> <%= item.name %> </TD>
+        <TD> <%= item.birth_ymd %> </TD>
+        <TD> <%= item.address %> </TD>
+        <TD> <%= item.country_cd %> </TD>
+      </TR>
+      
+      <% }); %>
+      
+    </TABLE>
+    
+  </body>
+</html>
+
